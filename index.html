@@ -1,70 +1,130 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<title>TEST SITE</title>
-<style>
-    ul{
-        padding: 0;
-        list-style: none;
-        background: #f2f2f2;
-    }
-    ul li{
-        display: inline-block;
-        position: relative;
-        line-height: 21px;
-        text-align: left;
-    }
-    ul li a{
-        display: block;
-        padding: 8px 25px;
-        color: MediumSeaGreen;
-        text-decoration: none;
-    }
-    ul li a:hover{
-        color: #fff;
-        background: #939393;
-    }
-    ul li ul.dropdown{
-        min-width: 100%; /* Set width of the dropdown */
-        background: #f2f2f2;
-        display: none;
-        position: absolute;
-        z-index: 999;
-        left: 0;
-    }
-    ul li:hover ul.dropdown{
-        display: block;	/* Display the dropdown */
-    }
-    ul li ul.dropdown li{
-        display: block;
-    }
-</style>
-</head>
+ <!Doctype html>
+<html>
 <body>
-    <ul>
-        <li>
-            <a href="#">OVERVIEW &#9662;</a>
-            <ul class="dropdown">
-                <li><a href="https://github.com/PopaGeorgianVictor/PORTOFOLIO" target="_blank">Portofolio</a></li>
-                <li><a href="https://github.com/PopaGeorgianVictor/HOMEWORK" target="_blank">Homework</a></li>
-                <li><a href="https://github.com/PopaGeorgianVictor/SELENIUM-FRAMEWORK" target="_blank">Framework</a></li>
-                <li><a href="https://popageorgianvictor.github.io/MyTestSite/" target="_blank">My Test Site</a></li>
+    <style>
 
-            </ul>
-        </li>
-             <li>
-            <a href="#">PYTHON &#9662;</a>
-            <ul class="dropdown">
-                <li><a href="https://github.com/PopaGeorgianVictor/HOMEWORK/blob/master/Operators_ConditionalStatements.py" target="_blank">Operators/Conditionals</a></li>
+html{
+    background-image: url();
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 700px;
+    background-position: center;
+}
+body{
+    font-size: 22px;
+    line-height: 32px;
+    color: #ffffff;
+    font-family: OCR A Std, monospace;
+;
+}
+nav{
+    background-color: MediumSeaGreen;
+}
+nav ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    position: relative;
+}
+nav ul li{
+    display: inline-block;
+    position: relative;
+    background-color: MediumSeaGreen;
+}
+nav a{
+    display: block;
+    padding: 0 10px;
+    color: #fff;
+    line-height: 60px;
+    font-size: 20px;
+    text-decoration: none;
+}
+/* Hide Dropdown by Default*/
+nav ul ul {
+    display: none;
+    position: absolute;
+    top: 60px;
+}
+/* hover */
+nav a:hover{
+    background-color:forestgreen   ;
+}
+/* Display Dropdown on Hover */
+nav ul li:hover > ul {
+    display: inherit;
+}
+/* Fisrt Tier Dropdown */
+nav ul ul li{
+    width: 170px;
+    float: none;
+    display: list-item;
+    position: relative;
+
+}
+
+/* ============ Second, Third and More Tiers ===========*/
+nav ul ul ul li {
+    display: table-row;
+    position: relative;
+    top: -60px;
+    left: 170px;
+
+/* Change this in order to change the Dropdown symbol */
+li > a::after { content: ' +';}
+li > a:only-child::after {
+    content: '';
+}
+
+
+</style>
+ <div id="container">
+        <nav>
+            <ul>
+                <li><a href="">OVERVIEW &#9662;</a>
+                <!--Fridt Tier Drop Down-->
+                <ul>
+
+                    <li><a href="https://github.com/PopaGeorgianVictor/PORTOFOLIO" target="_blank">Portofolio</a></li>
+                    <li><a href="https://github.com/PopaGeorgianVictor/HOMEWORK" target="_blank">Homework</a></li>
+                    <li><a href="https://github.com/PopaGeorgianVictor/SELENIUM-FRAMEWORK" target="_blank">Framework</a></li>
+                    <li><a href="https://popageorgianvictor.github.io/MyTestSite/" target="_blank">Test Site</a></li>
+
+                </ul>
+                <li><a href="">SKILL &#9662;</a>
+
+                    <!--First Tier Drop Down-->
+                    <ul>
+
+                        <li><a href="">Python &#8618;</a>
+                            <!--Second Tier Drop Down-->
+                            <ul>
+                                <li><a href="https://github.com/PopaGeorgianVictor/HOMEWORK/blob/master/Operators_ConditionalStatements.py" target="_blank">Operators/Conditionals</a></li>
                 <li><a href="https://github.com/PopaGeorgianVictor/HOMEWORK/blob/master/DataStructures.py" target="_blank">Data Structure</a></li>
                 <li><a href="https://github.com/PopaGeorgianVictor/HOMEWORK/blob/master/Loops.py" target="_blank">Loops</a></li>
                 <li><a href="https://github.com/PopaGeorgianVictor/HOMEWORK/blob/master/LOOP_EXERCISES.py" target="_blank">Loop Exercises</a></li>
                 <li><a href="https://github.com/PopaGeorgianVictor/HOMEWORK/blob/master/Functions.py" target="_blank">Function</a></li>
                 <li><a href="https://github.com/PopaGeorgianVictor/HOMEWORK/blob/master/OOP_Class%26Object.py" target="_blank">Class & Objects</a></li>
                 <li><a href="https://github.com/PopaGeorgianVictor/HOMEWORK/blob/master/OOP_4Pillars.py" target="_blank">OOP Pillars</a></li>
-                <li><a href="https://github.com/PopaGeorgianVictor/HOMEWORK/blob/master/OOP_4Pillars_decorators.py" target="_blank">Decorators</a></li>
-    </ul>
-             </li>
+                <li><a href="https://github.com/PopaGeorgianVictor/HOMEWORK/blob/master/OOP_4Pillars_decorators.py" target="_blank">Decorators</a>
+                </li></ul>
 
-</html>
+                        <li><a href="">Selenium &#8618;</a>
+                            <!--Second Tier Drop Down-->
+                            <ul>
+
+                                <li><a href="https://github.com/PopaGeorgianVictor/HOMEWORK/blob/master/SELENIUM_SELECTORS.py" target="_blank">Selectors</a></li>
+                                <li><a href="https://github.com/PopaGeorgianVictor/HOMEWORK/blob/master/SELENIUM_VERIFIERS.py" target="_blank">Verifiers</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                    </ul>
+
+                </li>
+                <li><a href="">Graphic Design</a></li>
+                <li><a href="">Inspiration</a></li>
+                <li><a href="">Contact</a></li>
+                <li><a href="">About</a></li>
+            </ul>
+        </nav>
+    </div><!--End HTML Code-->
